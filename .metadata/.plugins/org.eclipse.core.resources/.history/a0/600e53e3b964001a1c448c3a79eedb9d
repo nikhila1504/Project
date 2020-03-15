@@ -1,0 +1,12 @@
+package com.cts.repositroy;
+
+import java.util.Optional;
+import org.springframework.data.repository.CrudRepository;
+
+import com.cts.beans.Users;
+
+public interface LoginRepository extends CrudRepository<Users, Integer>{
+
+	Optional<Users> findById(int id);
+
+}

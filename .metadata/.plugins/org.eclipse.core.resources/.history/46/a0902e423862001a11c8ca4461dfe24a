@@ -1,0 +1,17 @@
+package com.cts.repositroy;
+
+import java.util.Optional;
+
+import org.springframework.data.convert.ReadingConverter;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import com.cts.beans.User;
+import com.cts.beans.Users;
+
+//#3
+@Repository
+public interface UsersRepository extends CrudRepository<Users, Integer> {
+	
+	Optional<Users> findByUserName(String userName);
+}
